@@ -1,6 +1,8 @@
 package quiz1.model;
 
-public abstract class User {
+import quiz1.interfaces.DetailView;
+
+public abstract class User implements DetailView {
     private String name;
     private String email;
     public User(String name, String email) {
@@ -20,7 +22,8 @@ public abstract class User {
         this.email = email;
     }
 
-    public void showUserDetails() {
+    @Override
+    public void showDetails() {
         System.out.println("Name: " + name);
         System.out.println("Email: " + email);
     }

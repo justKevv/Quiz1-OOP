@@ -1,8 +1,9 @@
 package quiz1;
 
 import java.util.Date;
+import quiz1.interfaces.DetailView;
 
-public class Payment {
+public class Payment implements DetailView {
 
     private int paymentId;
     private Date paymentDate;
@@ -18,7 +19,8 @@ public class Payment {
         this.amount = amount;
     }
 
-    public void showPaymentDetails() {
+    @Override
+    public void showDetails() {
         System.out.println("Payment Id: " + paymentId);
         System.out.println("Payment Date: " + paymentDate);
         System.out.println("Course: " + course.getCourseName());

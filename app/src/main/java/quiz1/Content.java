@@ -1,8 +1,9 @@
 package quiz1;
 
 import java.util.Date;
+import quiz1.interfaces.DetailView;
 
-public class Content {
+public class Content implements DetailView {
     private int contentId;
     private String type;
     private String contentName;
@@ -15,7 +16,8 @@ public class Content {
         this.uploadDate = uploadDate;
     }
 
-    public void showContentDetails() {
+    @Override
+    public void showDetails() {
         System.out.println("Content Id: " + contentId);
         System.out.println("Type: " + type);
         System.out.println("Content Name: " + contentName);

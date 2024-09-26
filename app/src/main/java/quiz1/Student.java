@@ -2,8 +2,9 @@ package quiz1;
 
 import quiz1.model.User;
 import java.util.ArrayList;
+import quiz1.interfaces.DetailView;
 
-public class Student extends User {
+public class Student extends User implements DetailView {
 
     private int studentId;
     private ArrayList<Course> courses;
@@ -26,9 +27,10 @@ public class Student extends User {
         return courses;
     }
 
-    public void showStudentDetails() {
+    @Override
+    public void showDetails() {
         System.out.println("Student Id: " + studentId);
-        super.showUserDetails();
+        super.showDetails();
         System.out.println("Courses: ");
 
         for (Course course : courses) {

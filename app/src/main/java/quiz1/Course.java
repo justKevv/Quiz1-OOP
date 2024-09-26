@@ -1,9 +1,10 @@
 package quiz1;
 
 import java.util.ArrayList;
+import quiz1.interfaces.DetailView;
 
 
-public class Course {
+public class Course implements DetailView {
     private int courseId;
     private String courseName;
     private String courseDescription;
@@ -20,7 +21,8 @@ public class Course {
         this.students = new ArrayList<>();
     }
 
-    public void showCourseDetails() {
+    @Override
+    public void showDetails() {
         System.out.println("Course Id: " + courseId);
         System.out.println("Course Name: " + courseName);
         System.out.println("Course Description: " + courseDescription);

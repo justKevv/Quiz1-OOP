@@ -34,15 +34,17 @@ public class Main {
         course2.addStudent(student2);
         course3.addStudent(student3);
 
-        student1.showStudentDetails();
+        student1.showDetails();
 
-        course1.showCourseDetails();
+        course1.showDetails();
 
-        content1course1.showContentDetails();
+        content1course1.showDetails();
 
         Payment payment = new Payment(1, new Date(), course1, student1, 100.0);
 
-        payment.showPaymentDetails();
+        payment.showDetails();
+
+        student1.getName();
 
     }
 }
